@@ -1,11 +1,11 @@
 name: "Test"
 
-on: ["push"]
+on: [ "push" ]
 
 jobs:
   test:
-  runs-on: ubuuntu-latest
-  steps:
+    runs-on: ubuntu-latest
+    steps:
     - name: Variables
       uses: iamtheyammer/branch-env-vars@v1.0.4
       with:
