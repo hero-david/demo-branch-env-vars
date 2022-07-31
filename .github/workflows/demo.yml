@@ -6,18 +6,16 @@ jobs:
   test:
   runs-on: ubuuntu-latest
   steps:
-  
-  - name: Variables
-    uses: iamtheyammer/branch-env-vars@v1.0.4
-    with:
-      SECRET_KEY: |
-        main:${{ secrets.SECRET_KEY }}
-      CHECKVAR: |
-        main:"hi i am checkvar"
-        
-  - name: Test
-    run: |
-      echo "start of echo :"
-      echo "$SECRET_KEY"
-      echo "$CHECKVAR"
-      echo "end of echo"
+    - name: Variables
+      uses: iamtheyammer/branch-env-vars@v1.0.4
+      with:
+        SECRET_KEY: |
+          main:${{ secrets.SECRET_KEY }}
+        CHECKVAR: |
+          main:"hi i am checkvar"
+    - name: Test
+      run: |
+        echo "start of echo :"
+        echo "$SECRET_KEY"
+        echo "$CHECKVAR"
+        echo "end of echo"
